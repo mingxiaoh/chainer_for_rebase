@@ -19,31 +19,6 @@ The following versions of Python can be used:
 
 Above recommended environments are tested. We cannot guarantee that Intel® optimization for Chainer works on other environments including Windows* and macOS*, even if Intel optimization for Chainer looks to be running correctly.
 
-## Dependencies
-Before installing Chainer, we recommend to upgrade setuptools if you are using an old one:
-
-$ pip install -U setuptools
-
-The following packages are required to install Chainer.
-- NumPy 1.9, 1.10, 1.11, 1.12, 1.13
-- Six 1.9+
-- Swig 3.0.9+
-- ideep4py 1.0.4
-
-The following packages are optional dependencies. Chainer can be installed without them, in which case the corresponding features are not available.
-
-Caffe model support
-- protobuf 3.0+
-
-Image dataset support
-- pillow 2.3+
-
-HDF5 serialization support
-- h5py 2.5+
-
-Testing utilities
-- pytest 3.2.5+
-
 
 ## Install Chainer from source
 You can use setup.py to install Chainer from the tarball:
@@ -56,6 +31,10 @@ Use pip to uninstall Chainer:
 
 ```sh
 $ pip uninstall chainer
+```
+ideep4py has been splitted from Chainer, you need to install ideep4py:
+```sh
+$ pip install ideep4y
 ```
 
 
