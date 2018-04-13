@@ -26,17 +26,15 @@ You can use setup.py to install Chainer from the tarball:
 ```sh
 $ python setup.py install
 ```
-
-Use pip to uninstall Chainer:
-
-```sh
-$ pip uninstall chainer
-```
 ideep4py has been splitted from Chainer, you need to install ideep4py:
 ```sh
 $ pip install ideep4y
 ```
+Use pip to uninstall chainer and ideep4py:
 
+```sh
+$ pip uninstall chainer ideep4py
+```
 
 ## Training Examples
 
