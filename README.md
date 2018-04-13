@@ -28,6 +28,7 @@ The following packages are required to install Chainer.
 - NumPy 1.9, 1.10, 1.11, 1.12, 1.13
 - Six 1.9+
 - Swig 3.0.9+
+- ideep4py 1.0.4
 
 The following packages are optional dependencies. Chainer can be installed without them, in which case the corresponding features are not available.
 
@@ -43,9 +44,6 @@ HDF5 serialization support
 Testing utilities
 - pytest 3.2.5+
 
-Intel® MKL-DNN
-- You don’t need to manually install Intel MKL-DNN, when build Intel optimization for Chainer, Intel MKL-DNN will be downloaded and built automatically, thus, boost, glog and gflags are also required.
-
 
 ## Install Chainer from source
 You can use setup.py to install Chainer from the tarball:
@@ -59,12 +57,6 @@ Use pip to uninstall Chainer:
 ```sh
 $ pip uninstall chainer
 ```
-
-
-## Run with Docker
-
-We are providing the Docker image and Dockerfile for Ubuntu and Centos based on python2 and python3, respectively. For details see: [How to build and run Intel optimization for Chainer Docker image](https://github.com/intel/chainer/wiki/How-to-build-and-run-Intel-Chainer-Docker-image).
-
 
 
 ## Training Examples
