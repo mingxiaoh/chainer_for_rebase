@@ -26,7 +26,7 @@ You can use setup.py to install Chainer from the tarball:
 ```sh
 $ python setup.py install
 ```
-ideep4py has been splitted from Chainer, you need to install ideep4py:
+ideep4py has been splitted from Chainer, so you also need to install ideep4py:
 ```sh
 $ pip install ideep4y
 ```
