@@ -1,6 +1,6 @@
 # iDeep: Intel Deep Learning Extension Package
 
-Intel Deep Learning Extension Package is a module for collection of accelerated deep learning operations like convolution, deconvolution, relu etc. It uses intel MKL and MKL-DNN as acceleration engine.
+Intel Deep Learning Extension Package is a module for collection of accelerated deep learning operations like convolution, deconvolution, relu etc. It uses Intel MKL-DNN as acceleration engine.
 
 
 ## Requirements
