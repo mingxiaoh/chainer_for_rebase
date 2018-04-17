@@ -48,7 +48,7 @@ If you use old ``setuptools``, upgrade it:
 pip install -U setuptools
 ```
 
-install iDeep python package(ideep4py) from the source code:
+Install iDeep python package(ideep4py) from the source code:
 
 ```
 git submodule update --init && mkdir build && cmake .. 
@@ -56,7 +56,6 @@ python setup.py install
 ```
 
 ## More information
-- MKL site: https://software.intel.com/en-us/mkl
 - MKL-DNN github: https://github.com/01org/mkl-dnn
 - iDeep github: https://github.com/intel/ideep.git
 - Chainer github: https://github.com/pfnet/chainer
