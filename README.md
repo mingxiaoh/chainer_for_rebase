@@ -25,15 +25,15 @@ Requirements for some features:
 
 ## Installation
 
-### iDeep cpp API
+### iDeep Cpp API
 
-Head file mode to introduce iDeep cpp APIs:
+Head file mode to introduce iDeep Cpp APIs:
 
 ```
 #include "ideep.hpp"
 ```
 
-Pin singleton head file to one cpp file of your project to instance iDeep singletons.
+Pin singleton head file to one Cpp file of your project to instance iDeep singletons.
 
 ```
 @@ main.cc
