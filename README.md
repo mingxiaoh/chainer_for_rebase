@@ -1,83 +1,68 @@
-<div align="center"><img src="docs/image/chainer_red_h.png" width="400"/></div>
+# ideep: Intel deep learning extension for python and cpp
 
-# IntelChainer: Optimized-Chainer for Intel Architectures
+Intel deep learning extension for python and cpp is a module for collection of accelerated deep learning operations like convolution, deconvolution, relu etc. It uses intel MKL and MKL-DNN as acceleration engine. The operator object called Compute Complex (CC), each operator are implemented as one Compute Complex, and its tensor oprand is called 'MD-Array'. 'MD-Array' supports python new buffer protocol and operates compatibily with NumPY ND-Array.
 
-[![GitHub license](https://img.shields.io/github/license/intel/chainer.svg)](https://github.com/intel/chainer)
-[![travis](https://img.shields.io/travis/intel/chainer/master.svg)](https://travis-ci.org/intel/chainer)
-[![Read the Docs](https://readthedocs.org/projects/chainer/badge/?version=stable)](https://docs.chainer.org/en/stable/?badge=stable)
+Refer example and tests directories for more information
 
+## Requirements
 
-Chainer* is a Python*-based deep learning framework aiming at flexibility and intuition. It provides automatic differentiation APIs based on the define-by-run approach (a.k.a. dynamic computational graphs) as well as object-oriented high-level APIs to build and train neural networks. It supports various network architectures including feed-forward nets, convnets, recurrent nets and recursive nets. It also supports per-batch architectures. Forward computation can include any control flow statements of Python without lacking the ability of backpropagation. It makes code intuitive and easy to debug. Intel® optimization for Chainer, is currently integrated with the latest release of Intel® Math Kernel Library for Deep Neural Networks (Intel® MKL-DNN) 2017 optimized for Intel® Advanced Vector Extensions 2 (Intel® AVX) and Intel® Advanced Vector Extensions 512 (Intel®AVX-512) instructions which are supported in Intel® Xeon® and Intel® Xeon Phi™ processors.
+This preview version of ideep is tested on Ubuntu 16.04 and OS X, and examples are implemented as a suggestion for its integration of chainer v4.0.0b4.
 
-## Recommended Environments
-We recommend these Linux distributions.
-- Ubuntu 14.04/16.04 LTS 64bit
-- CentOS 7 64bit
+Minimum requirements:
+- Python 2.7.6+, 3.5.2+, 3.6.0+
+- Chainer v4.0.0b4
+- Numpy 1.13
+- Six 1.9+
+- MKL 2018 Initial Release 
+- MKL-DNN 0.1+
+- Swig 3.0.12
+- Cmake3
+- Doxygen 1.8.5
+- C++ compiler with C++11 standard support
 
-The following versions of Python can be used: 
-- 2.7.5+, 3.5.2+, and 3.6.0+
+Requirements for some features:
+- Testing utilities
+  - Mock
+  - Gtest
 
-Above recommended environments are tested. We cannot guarantee that Intel® optimization for Chainer works on other environments including Windows* and macOS*, even if Intel optimization for Chainer looks to be running correctly.
+## Installation
+### Install MKL
 
+Download and install intel MKL at https://software.intel.com/en-us/mkl
 
-## Install Chainer from source
-You can use setup.py to install Chainer from the tarball:
+### Install MKL-DNN
 
-```sh
-$ python setup.py install
+Refer https://github.com/01org/mkl-dnn for install instruction
+
+### Install python package
+
+If you use old ``setuptools``, upgrade it:
+
 ```
-ideep4py has been splitted from Chainer, so you also need to install ideep4py:
-```sh
-$ pip install ideep4y
-```
-Use pip to uninstall chainer and ideep4py:
-
-```sh
-$ pip uninstall chainer ideep4py
-```
-
-## Training Examples
-
-Training test with mnist dataset:
-```sh
-$ cd examples/mnist
-$ python train_mnist.py -g -1
+pip install -U setuptools
 ```
 
-Training test with cifar datasets:
-- run the CIFAR-100 dataset:
-```sh
-$ cd examples/cifar
-$ python train_cifar.py –g -1 --dataset='cifar100'
+install ideep from the source code:
+
 ```
-- run the CIFAR-10 dataset:
-```sh
-$ cd examples/cifar
-$ python train_cifar.py –g -1 --dataset='cifar10'
+git submodule update --init && mkdir build && cmake .. 
+python setup.py install
 ```
 
+### Install cpp package
+Install ideep from the source code:
 
-## Single Node Performance Test Configurations
+```
+git submodule update --init && mkdir build && cmake ..
+make && make install
+```
 
-For Single Node Performance Test Configurations, please refer to following wiki:
 
-https://github.com/intel/chainer/wiki/Intel-Chainer-Single-Node-Performance-Test-Configurations
-
+## More information
+- MKL site: https://software.intel.com/en-us/mkl
+- MKL-DNN github: https://github.com/01org/mkl-dnn
+- ideep github: https://github.com/intel/ideep.git
+- Chainer github: https://github.com/pfnet/chainer
 
 ## License
-
 MIT License (see `LICENSE` file).
-
-
-## Reference
-
-Tokui, S., Oono, K., Hido, S. and Clayton, J.,
-Chainer: a Next-Generation Open Source Framework for Deep Learning,
-*Proceedings of Workshop on Machine Learning Systems(LearningSys) in
-The Twenty-ninth Annual Conference on Neural Information Processing Systems (NIPS)*, (2015)
-[URL](http://learningsys.org/papers/LearningSys_2015_paper_33.pdf), [BibTex](chainer_bibtex.txt)
-
-
-## More Information
-- [Intel® optimization for Chainer github](https://github.com/intel/chainer)
-- [Release notes](https://github.com/intel/chainer/releases)
