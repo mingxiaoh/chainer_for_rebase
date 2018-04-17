@@ -58,7 +58,7 @@ Pin singleton head file to one cpp file of your project to instance iDeep single
 ## More information
 - MKL site: https://software.intel.com/en-us/mkl
 - MKL-DNN github: https://github.com/01org/mkl-dnn
-- ideep github: https://github.com/intel/ideep.git
+- iDeep github: https://github.com/intel/ideep.git
 - Chainer github: https://github.com/pfnet/chainer
 
 ## License
