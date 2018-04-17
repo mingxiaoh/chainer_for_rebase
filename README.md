@@ -25,21 +25,6 @@ Requirements for some features:
 
 ## Installation
 
-### Install iDeep python package
-
-If you use old ``setuptools``, upgrade it:
-
-```
-pip install -U setuptools
-```
-
-install iDeep python package(ideep4py) from the source code:
-
-```
-git submodule update --init && mkdir build && cmake .. 
-python setup.py install
-```
-
 ### iDeep cpp API
 
 Head file mode to introduce iDeep cpp APIs:
@@ -53,6 +38,21 @@ Pin singleton head file to one cpp file of your project to instance iDeep single
 ```
 @@ main.cc
 #include "ideep_pin_singletons.hpp"
+```
+
+### Install iDeep python package
+
+If you use old ``setuptools``, upgrade it:
+
+```
+pip install -U setuptools
+```
+
+install iDeep python package(ideep4py) from the source code:
+
+```
+git submodule update --init && mkdir build && cmake .. 
+python setup.py install
 ```
 
 ## More information
