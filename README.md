@@ -1,8 +1,7 @@
-# ideep: Intel deep learning extension for python and cpp
+# iDeep: Intel Deep Learning Extension Package
 
-Intel deep learning extension for python and cpp is a module for collection of accelerated deep learning operations like convolution, deconvolution, relu etc. It uses intel MKL and MKL-DNN as acceleration engine. The operator object called Compute Complex (CC), each operator are implemented as one Compute Complex, and its tensor oprand is called 'MD-Array'. 'MD-Array' supports python new buffer protocol and operates compatibily with NumPY ND-Array.
+Intel Deep Learning Extension Package is a module for collection of accelerated deep learning operations like convolution, deconvolution, relu etc. It uses intel MKL and MKL-DNN as acceleration engine.
 
-Refer example and tests directories for more information
 
 ## Requirements
 
