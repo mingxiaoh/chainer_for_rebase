@@ -8,32 +8,24 @@ Intel Deep Learning Extension Package is a module for collection of accelerated 
 This preview version of iDeep is tested on Ubuntu 16.04 and OS X.
 
 Minimum requirements:
-- Python 2.7.6+, 3.5.2+, 3.6.0+
-- Chainer v4.0.0b4
-- Numpy 1.13
-- Six 1.9+
-- MKL 2018 Initial Release 
-- MKL-DNN 0.1+
-- Swig 3.0.12
 - Cmake3
-- Doxygen 1.8.5
+- GCC 5.3+
 - C++ compiler with C++11 standard support
+- MKL-DNN 0.1+
+- Python 2.7.6+, 3.5.2+, 3.6.0+
+- Numpy 1.13
+- Swig 3.0.12
+- Doxygen 1.8.5
+
 
 Requirements for some features:
 - Testing utilities
-  - Mock
   - Gtest
+  - pytest
 
 ## Installation
-### Install MKL
 
-Download and install intel MKL at https://software.intel.com/en-us/mkl
-
-### Install MKL-DNN
-
-Refer https://github.com/01org/mkl-dnn for install instruction
-
-### Install python package
+### Install iDeep python package
 
 If you use old ``setuptools``, upgrade it:
 
@@ -41,21 +33,27 @@ If you use old ``setuptools``, upgrade it:
 pip install -U setuptools
 ```
 
-install ideep from the source code:
+install iDeep python package(ideep4py) from the source code:
 
 ```
 git submodule update --init && mkdir build && cmake .. 
 python setup.py install
 ```
 
-### Install cpp package
-Install ideep from the source code:
+### iDeep cpp API
+
+Include iDeep head file to introduce cpp APIs:
 
 ```
-git submodule update --init && mkdir build && cmake ..
-make && make install
+#include "ideep.hpp"
 ```
 
+Pin singleton head file to one cpp file of your project to instance iDeep singletons.
+
+```
+@@ main.cc
+#include "ideep_pin_singletons.hpp"
+```
 
 ## More information
 - MKL site: https://software.intel.com/en-us/mkl
