@@ -42,7 +42,7 @@ python setup.py install
 
 ### iDeep cpp API
 
-Include iDeep head file to introduce cpp APIs:
+Head file mode to introduce iDeep cpp APIs:
 
 ```
 #include "ideep.hpp"
