@@ -18,7 +18,7 @@ Minimum requirements:
 - Doxygen 1.8.5
 
 
-Requirements for some features:
+Other requirements:
 - Testing utilities
   - Gtest
   - pytest
