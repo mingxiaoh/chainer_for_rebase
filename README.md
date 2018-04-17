@@ -5,7 +5,7 @@ Intel Deep Learning Extension Package is a module for collection of accelerated 
 
 ## Requirements
 
-This preview version of ideep is tested on Ubuntu 16.04 and OS X, and examples are implemented as a suggestion for its integration of chainer v4.0.0b4.
+This preview version of iDeep is tested on Ubuntu 16.04 and OS X.
 
 Minimum requirements:
 - Python 2.7.6+, 3.5.2+, 3.6.0+
