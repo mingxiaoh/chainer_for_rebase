@@ -58,7 +58,7 @@ python setup.py install
 ## More information
 - MKL-DNN github: https://github.com/01org/mkl-dnn
 - iDeep github: https://github.com/intel/ideep.git
-- Chainer github: https://github.com/pfnet/chainer
+- Chainer github: https://github.com/chainer/chainer
 
 ## License
 MIT License (see `LICENSE` file).
